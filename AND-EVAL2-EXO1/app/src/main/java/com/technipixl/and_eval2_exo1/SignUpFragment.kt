@@ -34,8 +34,8 @@ class SignUpFragment : Fragment() {
                 alertDialogDisplay("L'email est invalide.")
             } else if (binding.loginEditText.text.toString().isEmpty()) {
                 alertDialogDisplay("Le login n'a pas été rempli.")
-            } else if (binding.passwordEditText.text.toString() != binding.confirmationEditText.text.toString()) {
-                alertDialogDisplay("Les mots de passe ne correspondent pas.")
+            } else if (binding.passwordEditText.text.toString() != binding.confirmationEditText.text.toString() || binding.passwordEditText.text.toString().isEmpty()) {
+                alertDialogDisplay("Les mots de passe ne correspondent pas ou le champ est vide")
             } else {
                 findNavController().navigate(SignUpFragmentDirections.actionSignUpFragmentToSuccessfulLoginFragment("bloggies", binding.loginEditText.text.toString()))
             }
