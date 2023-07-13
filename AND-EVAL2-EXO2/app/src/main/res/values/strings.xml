@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AND-EVAL2-EXO2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quantity_text">Quantité</string>
+    <string name="name_text">Nom:</string>
+    <string name="save_button">Enregistrer</string>
+    <string name="house_radio">Maison</string>
+    <string name="heatlh_radio">Hygiène</string>
+    <string name="drink_radio">Boisson</string>
+    <string name="food_radio">Nourriture</string>
+    <string name="cancel_button">Annuler</string>
+    <string name="noitems_title">Pas d\'articles</string>
+    <string name="add_item">Ajouter</string>
+</resources>
