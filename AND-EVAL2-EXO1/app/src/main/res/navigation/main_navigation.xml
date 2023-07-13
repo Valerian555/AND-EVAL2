@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.technipixl.and_eval2_exo1.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.technipixl.and_eval2_exo1.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_successfulLoginFragment"
+            app:destination="@id/successfulLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.technipixl.and_eval2_exo1.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <argument
+            android:name="message"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_loginFragment_to_successfulLoginFragment"
+            app:destination="@id/successfulLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successfulLoginFragment"
+        android:name="com.technipixl.and_eval2_exo1.SuccessfulLoginFragment"
+        android:label="fragment_successful_login"
+        tools:layout="@layout/fragment_successful_login" >
+        <argument
+            android:name="message"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+</navigation>
